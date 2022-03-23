@@ -16,6 +16,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from Staff import views as views_STAFF
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('api/staff/<int:id>', views_STAFF.staff_api, name='staff_api' ),
 ]
